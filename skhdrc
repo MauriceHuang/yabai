@@ -1,0 +1,53 @@
+skhdrc
+# changing window focus in the current space
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+# move window to display (west & east) and follow focus
+alt + shift - i : yabai -m window --display west ; yabai -m display --focus west;
+alt + shift - o : yabai -m window --display east ; yabai -m display --focus east;
+
+#WIP alt + shift - v: yabai -m window --swap west || yabai -m window --display west
+#WIP alt + shift - b: yabai -m window --swap east
+
+# changing focus between external displays (left and right)
+alt -i : yabai -m display --focus west
+alt -o : yabai -m display --focus east
+
+# toggliing window float
+shift + alt - t: yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# maximising window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+#restore the windows to default size
+shift + alt - e : yabai -m space --balance
+
+#swap windows
+shift + alt - j: yabai -m window --swap south
+shift + alt - k: yabai -m window --swap north
+shift + alt - h: yabai -m window --swap west
+shift + alt - l: yabai -m window --swap east
+
+#move and split windows
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+#move windows to spaces (left or right)
+shift + alt - p: yabai -m window --space prev;
+shift + alt - n: yabai -m window --space next;
+
+#move window to space number
+shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
+alt - 1 : yabai -m window --focus 1
+
+# --stop yabai
+ctrl + alt - q : brew services stop yabai
